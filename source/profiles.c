@@ -25,6 +25,11 @@ bool blue(led_t *currentKeyLedColors, uint8_t intensity) {
   return true;
 }
 
+bool white(led_t *currentKeyLedColors, uint8_t intensity) {
+  setAllKeysColor(currentKeyLedColors, 0xFFFFFF, intensity);
+  return true;
+}
+
 bool miamiNights(led_t *currentKeyLedColors, uint8_t intensity) {
   setAllKeysColor(currentKeyLedColors, 0x00979c, intensity);
   setModKeysColor(currentKeyLedColors, 0x9c008f, intensity);

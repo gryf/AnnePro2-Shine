@@ -100,18 +100,19 @@ profile profiles[] = {
     {green, {0, 0, 0, 0}, NULL, NULL},
     {blue, {0, 0, 0, 0}, NULL, NULL},
     {testBoard, {0, 0, 0, 0}, NULL, NULL},
-    {rainbowHorizontal, {0, 0, 0, 0}, NULL, NULL},
-    {rainbowVertical, {0, 0, 0, 0}, NULL, NULL},
-    {animatedRainbowVertical, {3000, 2000, 1200, 600}, NULL, NULL},
-    {animatedRainbowFlow, {1000, 400, 200, 140}, NULL, NULL},
-    {animatedRainbowWaterfall, {1600, 1200, 800, 400}, NULL, NULL},
-    {animatedBreathing, {1600, 1200, 800, 400}, NULL, NULL},
-    {animatedWave, {1200, 800, 400, 200}, NULL, NULL},
-    {animatedSpectrum, {1600, 1200, 800, 400}, NULL, NULL},
-    {reactiveFade,
-     {400, 1600, 1200, 800},
-     reactiveFadeKeypress,
-     reactiveFadeInit},
+    {white, {0, 0, 0, 0}, NULL, NULL},
+    /* {rainbowHorizontal, {0, 0, 0, 0}, NULL, NULL}, */
+    /* {rainbowVertical, {0, 0, 0, 0}, NULL, NULL}, */
+    /* {animatedRainbowVertical, {3000, 2000, 1200, 600}, NULL, NULL}, */
+    /* {animatedRainbowFlow, {1000, 400, 200, 140}, NULL, NULL}, */
+    /* {animatedRainbowWaterfall, {1600, 1200, 800, 400}, NULL, NULL}, */
+    /* {animatedBreathing, {1600, 1200, 800, 400}, NULL, NULL}, */
+    /* {animatedWave, {1200, 800, 400, 200}, NULL, NULL}, */
+    /* {animatedSpectrum, {1600, 1200, 800, 400}, NULL, NULL}, */
+    /* {reactiveFade, */
+     /* {400, 1600, 1200, 800}, */
+     /* reactiveFadeKeypress, */
+     /* reactiveFadeInit}, */
 };
 
 static uint8_t currentProfile = 0;
