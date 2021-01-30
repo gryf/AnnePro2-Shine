@@ -31,6 +31,11 @@ bool miamiNights(led_t *currentKeyLedColors, uint8_t intensity) {
   return true;
 }
 
+bool testBoard(led_t *currentKeyLedColors, uint8_t intensity) {
+  setAllKeysColor(currentKeyLedColors, 0xffffff, intensity);
+  setModKeysColorRGB(currentKeyLedColors, intensity);
+}
+
 bool rainbowHorizontal(led_t *currentKeyLedColors, uint8_t intensity) {
   for (uint16_t i = 0; i < NUM_ROW; ++i) {
     for (uint16_t j = 0; j < NUM_COLUMN; ++j) {

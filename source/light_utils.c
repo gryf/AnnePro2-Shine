@@ -15,6 +15,18 @@
 */
 
 // Array with Modifier keys IDs (Esc, Tab, Ctrl, Enter etc)
+/* ,-----------------------------------------------------------------------------------------.
+ * |  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  11 |  12 |    13     |
+ * |-----------------------------------------------------------------------------------------+
+ * |   14   |  15 |  16 |  17 |  18 |  19 |  20 |  21 |  22 |  23 |  24 |  25 |  26 |   27   |
+ * |-----------------------------------------------------------------------------------------+
+ * |    28   |  29 |  30 |  31 |  32 |  33 |  34 |  35 |  36 |  37 |  38 |  39 |     40      |
+ * |-----------------------------------------------------------------------------------------+
+ * |     41     |  42 |  43 |  44 |  45 |  46 |  47 |  48 |  49 |  50 |  51 |       52       |
+ * |-----------------------------------------------------------------------------------------+
+ * |   53  |   54  |   55  |               56                |   57  |   58  |  59   |   60  |
+ * \-----------------------------------------------------------------------------------------/
+ */
 static const uint8_t modKeyIDs[] = {0,  13, 14, 28, 40, 41, 42, 54,
                                     55, 56, 57, 58, 59, 60, 61, 62,
                                     63, 64, 65, 66, 67, 68, 69};
@@ -47,6 +59,22 @@ void setModKeysColor(led_t *ledColors, uint32_t color, uint8_t intensity) {
     ledColors[modKeyIDs[i]].green = green >> intensity;
     ledColors[modKeyIDs[i]].blue = blue >> intensity;
   }
+}
+
+void setModKeysColorRGB(led_t *ledColors, uint8_t intensity) {
+    uint8_t red, green, blue;
+    for (uint16_t i = 0; i < LEN(modKeyIDs); ++i) {
+        red = 0;
+        green = 0;
+        blue = 0;
+        if (i % 3 == 0) red = 0xFF;
+        if (i % 3 == 1) green = 0xFF;
+        if (i % 3 == 2) blue = 0xFF;
+
+        ledColors[modKeyIDs[i]].red = red >> intensity;
+        ledColors[modKeyIDs[i]].green = green >> intensity;
+        ledColors[modKeyIDs[i]].blue = blue >> intensity;
+    }
 }
 
 // Set specific key color
